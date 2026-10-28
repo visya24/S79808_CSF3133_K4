@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Course Feedback</title>
+</head>
+<body>
+
+  <!-- 
+  ===================================================================
+  ERROR IDENTIFICATION LIST (Part 1):
+  1. Line 10: Closing </head> tag placed inside body; corrected to </header>.
+  2. Line 20: <td>Rating</td> used in header row; corrected to <th>Rating</th>.
+  3. Line 22: Stray duplicate <tr> tag before Week 1; removed.
+  4. Line 26: Missing closing </tr> tag after Week 1 row; added </tr>.
+  5. Line 28: Incorrect colspan="3" on Week 2 cell in a 3-column table; removed colspan.
+  6. Line 32: Missing closing </td> tag after 'Semantic HTML'; added </td>.
+  7. Line 39: Label for="name" did not match input id="fullname"; updated to for="fullname".
+  8. Line 42 & 46: Radio buttons had different names (name="good" and name="poor"); updated to share name="rating".
+  9. Line 44-46: Label for "poor" placed before input element; reordered input before label.
+  10. Line 47: Label for="labs" did not match checkbox id="lab"; updated to for="lab".
+  11. Line 49: Misspelled closing tag </from>; corrected to </form>.
+  12. Line 52: Missing semicolon in HTML entity &copy; updated to &copy;.
+  ===================================================================
+  -->
+
+  <!-- HEADER -->
+  <header>
+    <h1>CSF3133 Course Feedback</h1>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#results">Results</a> | 
+    <a href="#form">Feedback Form</a>
+  </nav>
+
+  <!-- RESULTS SECTION -->
+  <section id="results">
+    <h2>Feedback Summary</h2>
+    <table border="1">
+        <tr>
+          <th>Week</th>
+          <th>Topic</th>
+          <th>Rating</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Introduction to HTML</td>
+          <td>4.5</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Tables and Forms</td>
+          <td>4.2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Semantic HTML</td>
+          <td>4.0</td>
+        </tr>
+    </table>
+  </section>
+
+  <!-- FEEDBACK FORM SECTION -->
+  <section id="form">
+    <h2>Give Your Feedback</h2>
+    <form action="submit_feedback.php" method="post">
+      
+      <p>
+        <label for="fullname">Name:</label><br>
+        <input type="text" id="fullname" name="name">
+      </p>
+
+      <fieldset>
+        <legend>Overall rating:</legend>
+        <input type="radio" id="good" name="rating" value="good">
+        <label for="good">Good</label><br>
+
+        <input type="radio" id="poor" name="rating" value="poor">
+        <label for="poor">Poor</label>
+      </fieldset>
+
+      <p>
+        <input type="checkbox" id="lab" name="lab" value="yes">
+        <label for="lab">I attended all labs</label>
+      </p>
+
+      <p>
+        <input type="submit" value="Submit">
+      </p>
+
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Copyright &copy; 2026 CSF3133</p>
+  </footer>
+
+</body>
+</html>

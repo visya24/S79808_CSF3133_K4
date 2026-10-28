@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ===================================================================
+     DOCUMENT HEAD SECTION
+     Contains metadata, character encoding, and page title.
+     =================================================================== -->
+<head>
+  <meta charset="utf-8">
+  <title>Faculty Web Development Workshop 2026</title>
+</head>
+
+<!-- ===================================================================
+     DOCUMENT BODY SECTION
+     Contains all visible content: Header/Nav, Main Sections, and Footer.
+     =================================================================== -->
+<body>
+
+  <!-- PAGE HEADER & NAVIGATION -->
+  <header>
+    <h1>Faculty Web Development Workshop 2026</h1>
+    <p>Empowering Students with Modern Web Technologies</p>
+  </header>
+
+  <nav>
+    <a href="#about">About the Event</a> |
+    <a href="#schedule">Event Schedule</a> |
+    <a href="#register">Registration</a>
+  </nav>
+
+  <!-- ==================== BODY CONTENT / SECTIONS ==================== -->
+
+  <!-- Section 1: About the Event -->
+  <section id="about">
+    <h2>About the Event</h2>
+    
+    <article>
+      <h3>Featured Speaker: Dr. Alex Tan</h3>
+      <p>Dr. Alex Tan is an associate professor in Web Technologies with over 15 years of industry experience in front-end development and accessibility standards.</p>
+    </article>
+
+    <article>
+      <h3>Key Activity: Hands-on HTML5 Hackathon</h3>
+      <p>Participants will work in teams to design and structure accessible, semantic web pages from scratch within a 3-hour intensive session.</p>
+    </article>
+  </section>
+
+  <!-- Section 2: Event Schedule Table -->
+  <section id="schedule">
+    <h2>Event Schedule</h2>
+    <table border="1">
+        <tr>
+          <th>Time</th>
+          <th>Activity</th>
+          <th>Venue</th>
+          <th>Person in Charge</th>
+        </tr>
+        <tr>
+          <td>08:30 AM - 09:00 AM</td>
+          <td>Registration &amp; Welcome Refreshments</td>
+          <td>FSM Main Foyer</td>
+          <td>Event Crew</td>
+        </tr>
+        <tr>
+          <td>09:00 AM - 10:30 AM</td>
+          <td>Keynote: Future of Web Development</td>
+          <!-- rowspan used: Venue shared across 2 consecutive sessions -->
+          <td rowspan="2">Auditorium A</td>
+          <td>Dr. Alex Tan</td>
+        </tr>
+        <tr>
+          <td>10:30 AM - 12:00 PM</td>
+          <td>Hands-on Session: Semantic HTML Structure</td>
+          <td>Mdm. Sarah Lee</td>
+        </tr>
+        <tr>
+          <td>12:00 PM - 02:00 PM</td>
+          <!-- colspan used: Lunch break spans Activity, Venue, and Person in Charge -->
+          <td colspan="3">Lunch Break &amp; Networking Session</td>
+        </tr>
+        <tr>
+          <td>02:00 PM - 04:30 PM</td>
+          <td>Team Hackathon Competition</td>
+          <td>Computer Lab 3</td>
+          <td>Tech Committee</td>
+        </tr>
+        <tr>
+          <td>04:30 PM - 05:00 PM</td>
+          <td>Prize Giving &amp; Closing Ceremony</td>
+          <td>Auditorium A</td>
+          <td>Organising Chair</td>
+        </tr>
+    </table>
+  </section>
+
+  <!-- Section 3: Registration Form -->
+  <section id="register">
+    <h2>Registration Form</h2>
+    <form action="register.html" method="post">
+      
+      <!-- Text Inputs with Linked Labels -->
+      <p>
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required>
+      </p>
+
+      <p>
+        <label for="matric">Matric Number:</label><br>
+        <input type="text" id="matric" name="matric" required>
+      </p>
+
+      <p>
+        <label for="email">E-mail Address:</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+
+      <!-- Grouped Radio Buttons (Same Name) -->
+      <fieldset>
+        <legend>Year of Study</legend>
+        <input type="radio" id="year1" name="year" value="Year 1" required>
+        <label for="year1">Year 1</label><br>
+
+        <input type="radio" id="year2" name="year" value="Year 2">
+        <label for="year2">Year 2</label><br>
+
+        <input type="radio" id="year3" name="year" value="Year 3">
+        <label for="year3">Year 3</label><br>
+
+        <input type="radio" id="year4" name="year" value="Year 4">
+        <label for="year4">Year 4</label>
+      </fieldset>
+
+      <!-- Checkboxes for Session Selection -->
+      <fieldset>
+        <legend>Sessions You Wish to Join (Select at least 1)</legend>
+        <input type="checkbox" id="session_keynote" name="sessions[]" value="Keynote">
+        <label for="session_keynote">Keynote: Future of Web Development</label><br>
+
+        <input type="checkbox" id="session_workshop" name="sessions[]" value="Workshop">
+        <label for="session_workshop">Hands-on Session: Semantic HTML Structure</label><br>
+
+        <input type="checkbox" id="session_hackathon" name="sessions[]" value="Hackathon">
+        <label for="session_hackathon">Team Hackathon Competition</label>
+      </fieldset>
+
+      <!-- Drop-down List -->
+      <p>
+        <label for="programme">Programme / Faculty:</label><br>
+        <select id="programme" name="programme" required>
+          <option value="">-- Please Select --</option>
+          <option value="CS">Bachelor of Computer Science</option>
+          <option value="SE">Bachelor of Software Engineering</option>
+          <option value="IT">Bachelor of Information Technology</option>
+          <option value="DS">Bachelor of Data Science</option>
+        </select>
+      </p>
+
+      <!-- Submit Button -->
+      <p>
+        <input type="submit" value="Register Now">
+      </p>
+
+    </form>
+  </section>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer>
+    <p>Organiser: Faculty of Computer Science and Mathematics, UMT</p>
+    <p>&copy; 2026 Faculty Event Committee. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
