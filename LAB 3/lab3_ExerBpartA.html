@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+    <!-- List of errors found and corrected:
+
+    Error 1 (Line 1): Incomplete DOCTYPE declaration.
+    Error 2 (Line 9): Incorrect closing position of span.
+    Error 3 (Line 11): Span used instead of div.
+    Error 4 (Line 13): Incorrect HTML entities.
+    Error 5 (Lines 14-15): Numbers joined as strings.
+    Error 6 (Line 18): Email type misspelled as emial.
+    Error 7 (Line 18): Email input missing required.
+    Error 8 (Lines 22-26): Datalist ID does not match.
+    Error 9 (Line 32): Slider minimum and maximum reversed.
+    Error 10 (Line 33): Incorrect output reference.
+    Error 11 (Line 38): Incorrect copyright entity.
+    Error 12 (Lines 41-42): Duplicate closing tags.
+
+    -->
+
+    <!-- HEADER -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="content">
+
+        <h2>Book Your Ticket</h2>
+
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+        <form action="booking.php"
+        oninput="total.value = Number(adult.value) + Number(child.value)">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+            placeholder="Enter your name"
+            required autofocus>
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="date">Show date:</label>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <label for="movie">Movie:</label>
+            <input id="movie" name="movie" list="movies">
+
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+            </datalist>
+            <br><br>
+
+            <label for="adult">Adult tickets:</label>
+            <input type="number" id="adult" name="adult"
+            min="0" value="0">
+            <br><br>
+
+            <label for="child">Child tickets:</label>
+            <input type="number" id="child" name="child"
+            min="0" value="0">
+            <br><br>
+
+            <label for="rating">Rate our service:</label>
+            <input type="range" id="rating" name="rating"
+            min="1" max="5">
+            <br><br>
+
+            Total tickets:
+            <output name="total" for="adult child">0</output>
+            <br><br>
+
+            <input type="submit" value="Book Now">
+
+        </form>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

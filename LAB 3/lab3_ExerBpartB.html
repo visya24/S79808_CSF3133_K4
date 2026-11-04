@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="content">
+
+        <h2>Book Your Ticket</h2>
+
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+        <!-- BOOKING FORM -->
+        <form action="booking.php"
+        oninput="total.value = Number(adult.value) + Number(child.value);
+        price.value = Number(adult.value) * 12 + Number(child.value) * 8">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+            placeholder="Enter your name"
+            required autofocus>
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <!-- NEW: PHONE NUMBER -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+            placeholder="Enter phone number" required>
+            <br><br>
+
+            <label for="date">Show date:</label>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <!-- NEW: SHOW TIME -->
+            <label for="time">Show time:</label>
+            <input type="time" id="time" name="time">
+            <br><br>
+
+            <!-- MOVIE DATALIST -->
+            <label for="movie">Movie:</label>
+            <input id="movie" name="movie" list="movies">
+
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="The Haunted Campus">
+            </datalist>
+            <br><br>
+
+            <label for="adult">Adult tickets (RM12):</label>
+            <input type="number" id="adult" name="adult"
+            min="0" value="0">
+            <br><br>
+
+            <label for="child">Child tickets (RM8):</label>
+            <input type="number" id="child" name="child"
+            min="0" value="0">
+            <br><br>
+
+            <label for="rating">Rate our service:</label>
+            <input type="range" id="rating" name="rating"
+            min="1" max="5">
+            <br><br>
+
+            <!-- OUTPUT 1: TOTAL TICKETS -->
+            Total tickets:
+            <output name="total" for="adult child">0</output>
+            <br><br>
+
+            <!-- OUTPUT 2: TOTAL PRICE -->
+            Total price: RM
+            <output name="price" for="adult child">0</output>
+            <br><br>
+
+            <input type="submit" value="Book Now">
+
+        </form>
+
+    </div>
+
+    <!-- NEW SIDEBAR: NOW SHOWING -->
+    <div id="sidebar">
+
+        <h2>Now Showing</h2>
+
+        <ul>
+
+            <li>
+                <strong>Space Rangers</strong>
+                <span>PG</span>
+                <a href="https://www.youtube.com/results?search_query=Space+Rangers+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong>
+                <span>U</span>
+                <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>The Haunted Campus</strong>
+                <span>13</span>
+                <a href="https://www.youtube.com/results?search_query=The+Haunted+Campus+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+
+        <p>
+            e-Ticket&reg; &ndash; Campus Cinema
+            &lt; RM10 every Tuesday
+        </p>
+
+    </div>
+
+</body>
+</html>
