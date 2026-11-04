@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form with Calculator</title>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>Contact Us</h1>
+        <span>We are happy to hear from you!</span>
+    </div>
+
+    <hr>
+
+    <!-- Content Section -->
+    <div id="content">
+
+        <!-- Contact Form -->
+        <div id="contact">
+            <h2>Contact Form</h2>
+
+            <form onsubmit="alert('Thank you for contacting us!'); return false;">
+
+                Email:
+                <input type="email" name="email" required>
+                <br><br>
+
+                Preferred Contact Date:
+                <input type="date" name="contactDate" required>
+                <br><br>
+
+                Satisfaction Level:
+                <input type="range" id="satisfaction"
+                       min="0" max="10" value="5"
+                       oninput="level.value=this.value">
+
+                <output id="level">5</output>
+                <br><br>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- Inline Calculator -->
+        <div id="calculator">
+            <h2>Inline Calculator</h2>
+
+            First Number:
+            <input type="number" id="num1" value="0">
+            <br><br>
+
+            Second Number:
+            <input type="number" id="num2" value="0">
+            <br><br>
+
+            Sum:
+            <output id="result" for="num1 num2">0</output>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <h3>Contact Information</h3>
+
+        <p>Email: contact@example.com</p>
+        <p>Phone: 012-3456789</p>
+
+        <p>&copy; 2026 Contact Us. All Rights Reserved.</p>
+    </div>
+
+    <!-- JavaScript Calculator -->
+    <script>
+        function calculateSum() {
+
+            var x = parseFloat(document.getElementById("num1").value) || 0;
+
+            var y = parseFloat(document.getElementById("num2").value) || 0;
+
+            document.getElementById("result").value = x + y;
+
+        }
+
+        document.getElementById("num1").addEventListener("input", calculateSum);
+
+        document.getElementById("num2").addEventListener("input", calculateSum);
+    </script>
+
+</body>
+</html>
