@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lab Exercise 4</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .introduction {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .introduction h2 {
+            text-decoration: underline;
+            color: darkblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="home">
+
+        <h1>Welcome to My Website</h1>
+        <p>My Personal Webpage</p>
+
+    </header>
+
+
+    <!-- Navigation Bar -->
+    <nav>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Home Section -->
+    <section class="introduction">
+
+        <h2>Home</h2>
+
+        <p>
+            Welcome to my personal webpage!
+        </p>
+
+    </section>
+
+
+    <!-- About Me Section -->
+    <section id="about">
+
+        <article>
+
+            <h2>About Me</h2>
+
+            <p>
+                Hi! My name is Visyalli Thasarathan.
+                I am a student at Universiti Malaysia Terengganu (UMT),
+                studying Computer Science with Maritime Informatics.
+            </p>
+
+            <p>
+                I enjoy playing games, watching movies and
+                learning new things about technology.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- Video Section -->
+    <section id="video">
+
+        <h2>My Video</h2>
+
+        <figure>
+
+            <video width="600" controls>
+
+                <source src="video.mp4" type="video/mp4">
+
+                Your browser does not support HTML5 video.
+
+            </video>
+
+            <figcaption>
+                Red Dead Redemption (Love this game!)
+            </figcaption>
+
+        </figure>
+
+    </section>
+
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+
+        <h2>My Favourite Hobbies</h2>
+
+        <ul>
+            <li>Listening to music</li>
+            <li>Watching movies</li>
+            <li>Playing games</li>
+            <li>Reading books</li>
+        </ul>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <label for="name">Name:</label>
+
+            <input type="text" id="name" name="name">
+
+
+            <label for="email">Email:</label>
+
+            <input type="email" id="email" name="email">
+
+
+            <p>Gender:</p>
+
+            <label>
+                <input type="radio" name="gender" value="Male">
+                Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </label>
+
+
+            <p>Favourite Hobbies:</p>
+
+            <label>
+                <input type="checkbox" name="hobby" value="Music">
+                Music
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="Gaming">
+                Gaming
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="Reading">
+                Reading
+            </label>
+
+            <label>
+                <input type="checkbox" name="hobby" value="Sports">
+                Sports
+            </label>
+
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>&copy; 2026 My Personal Webpage</p>
+
+    </footer>
+
+</body>
+
+</html>
