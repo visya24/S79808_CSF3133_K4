@@ -1,0 +1,164 @@
+/* GENERAL PAGE STYLING */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FBF7F0;
+    color: #2C2C2C;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER WITH BACKGROUND IMAGE */
+header {
+    background-image: url("food.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    padding: 90px 20px;
+    position: relative;
+}
+
+/* Dark overlay for readable header text */
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+header p {
+    font-size: 17px;
+    text-shadow: 1px 1px 4px black;
+}
+
+/* NAVIGATION BAR */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2C2C2C;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 22px;
+    text-align: center;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+nav li a.active {
+    background-color: #E67E22;
+}
+
+/* MAIN CONTENT */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+section p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* FOOD TABLE */
+#food-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#food-table th,
+#food-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+#food-table th {
+    background-color: #1B4F72;
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#food-table tr:nth-child(even) {
+    background-color: #FDEBD0;
+}
+
+#food-table tr:nth-child(odd) {
+    background-color: white;
+}
+
+#food-table tr:hover {
+    background-color: #EFE6D8;
+}
+
+#food-table .price {
+    text-align: right;
+}
+
+/* FOOTER */
+footer {
+    background-color: #EFE6D8;
+    color: #2C2C2C;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 6px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 60px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav li {
+        float: none;
+        width: 100%;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    #food-table th,
+    #food-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
