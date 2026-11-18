@@ -1,0 +1,227 @@
+/* =====================================
+   GENERAL PAGE STYLING
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FBF7F0;
+
+    /* Paper image as webpage background */
+    background-image: url("paper.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    color: #2C2C2C;
+}
+
+
+/* =====================================
+   HEADER STYLING
+   ===================================== */
+
+header {
+    /* Books image as header background */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("books.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+   ===================================== */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+/* Navigation hover effect */
+nav li a:hover {
+    background-color: #111;
+}
+
+/* Active Home link */
+nav li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* =====================================
+   MAIN CONTENT
+   ===================================== */
+
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 35px auto;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+/* Section headings */
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #1B4F72;
+    border-left: 5px solid #04AA6D;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph formatting */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================
+   PRODUCT TABLE
+   ===================================== */
+
+#products {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Table borders and padding */
+#products td,
+#products th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Table header */
+#products th {
+    background-color: #1B4F72;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Alternating row colours */
+#products tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+#products tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Table hover effect */
+#products tr:hover {
+    background-color: #FDEBD0;
+}
+
+/* Align prices to the right */
+#products .price {
+    text-align: right;
+}
+
+
+/* =====================================
+   CONTACT SECTION
+   ===================================== */
+
+#contact {
+    background-color: #EFE6D8;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    background-color: #EFE6D8;
+    color: #2C2C2C;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    text-align: center;
+    margin: 5px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav li {
+        float: none;
+        width: 100%;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    #products th,
+    #products td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+}
+
