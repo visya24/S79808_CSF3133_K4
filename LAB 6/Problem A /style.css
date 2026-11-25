@@ -1,1 +1,100 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 0 15px;
+    background: #f3f6f8;
+    color: #222;
+}
 
+/* Header styling */
+header {
+    background: #205574;
+    color: white;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Sections */
+.panel {
+    background: white;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Name input */
+input {
+    padding: 8px;
+    margin: 5px;
+}
+
+/* Button styling */
+button {
+    padding: 9px 14px;
+    margin: 5px 3px;
+    background: #2879a8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #174e70;
+}
+
+/* Arrange player and computer images */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Image size */
+.choices img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+/* VS text */
+.versus {
+    font-weight: bold;
+}
+
+/* History table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Table header */
+th {
+    background: #205574;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #555;
+    margin: 20px;
+    font-size: 14px;
+}
